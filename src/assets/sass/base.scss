@@ -1,0 +1,116 @@
+$primaryColor: #dbb758;
+.transition {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: all;
+    transition-property: all;
+}
+
+img {
+    cursor: pointer;
+}
+
+.mu-item-wrapper, input {
+    @extend .transition;
+}
+
+div .mu-item-wrapper.hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.mu-raised-button.hover div.mu-raised-button-wrapper {
+    background-color: #fff;
+}
+
+.mu-icon {}
+
+a, .mu-menu-item-wrapper.active{
+    color: $primaryColor;
+}
+a:active, a:hover {
+    color: #dbb758;
+    cursor: pointer;
+}
+
+button + button.mu-raised-button {
+    margin-left: 10px;
+}
+
+.mu-text-field.has-label .mu-text-field-label, html body {
+    color: #333;
+}
+
+.sku-detail .sk-table .sk-row {
+    height: 70px;
+}
+
+.sk-row td {
+    position: relative;
+}
+
+.sk-img-viewer {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.sk-img-viewer .sk-img {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mu-checkbox + .mu-checkbox {
+    margin-left: 10px;
+}
+
+.mu-checkbox .mu-checkbox-icon {
+    margin-right: 4px;
+}
+
+.mu-text-field-input[disabled], .tags-part[disabled] {
+    color: rgba(0, 0, 0, .38);
+    cursor: not-allowed;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ellipsis2, .ellipsis3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.ellipsis2 {
+    -webkit-line-clamp: 2;
+}
+
+.ellipsis3 {
+    -webkit-line-clamp: 3;
+}
+
+.mu-text-field-hint.show {
+    opacity: 1;
+}
+
+.mu-text-field-hint {
+    color: rgba(0, 0, 0, .38);
+    font-size: 12px;
+}
+
+.mu-text-field-label{
+    transform: none !important;
+    font-size: 0.8em;
+}

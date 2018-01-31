@@ -1,0 +1,29 @@
+@import "../../../node_modules/muse-ui/less/vars.less"; // 默认基础的变量
+
+// 修改基础变量
+
+@primaryColor: @grey900;
+
+// background
+@backgroundColor: #fff;
+// icon
+@activeIconColor: fade(@fullWhite, 100%);
+@inActiveIconColor: fade(@fullWhite, 50%);
+
+@import "../../../node_modules/muse-ui/less/theme-vars.less";  // 默认组件变量
+
+// 修改组件变量
+@floatButtonDisabledColor: lighten(@alternateTextColor, 12%);
+
+// raisedButton
+@raisedButtonColor: @grey100;
+@raisedButtonTextColor: @grey900;
+@raisedButtonPrimaryColor: @grey900;
+@raisedButtonDisabledColor: darken(@alternateTextColor, 10%);
+@raisedButtonDisabledTextColor: fade(@textColor, 30%);
+@alternateTextColor: @grey50;
+
+@refreshControlColor: @primaryColor;
+@accentColor: #ad8f3f;
+
+//@import "../../../node_modules/muse-ui/less/theme.less"; // 主题相关的样式
