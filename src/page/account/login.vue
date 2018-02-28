@@ -1,14 +1,14 @@
 <template>
     <div>
-        <div class="top-bar" :title="title">
-            <div class="left">
-                <img src="../../assets/topbar.png" />
-            </div>
+        <!--<div class="top-bar" :title="title">-->
+            <!--<div class="left">-->
+                <!--<img src="../../assets/topbar.png" />-->
+            <!--</div>-->
 
-            <div class="right">
-                <mu-flat-button  @click="changeLang" :label="$t('language')" backgroundColor="transparent" color="#fff"/>
-            </div>
-        </div>
+            <!--<div class="right">-->
+                <!--<mu-flat-button  @click="changeLang" :label="$t('language')" backgroundColor="transparent" color="#fff"/>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <div class="main-container">
             <div class="logo-con">
@@ -84,6 +84,12 @@ export default {
         if (hasError){
             return;
         }
+  
+        _this.$store.commit("login");
+        this.$router.replace({
+          name: "home"
+        });
+        return;
 
         account.login.execute({
             mask: {},
@@ -92,7 +98,6 @@ export default {
                 password: this.d.password
             },
             success: function (data) {
-                //_this.$store.commit("login");
                 _this.$router.replace({
                     name: "page.account.selectBrand"
                 });
@@ -137,10 +142,11 @@ export default {
 
     .user-form{
         text-align: center;
-        padding: 10px;
-        width: 500px;
+        padding: 30px;
+        width: 400px;
         margin: auto;
-        max-width: 100%;
+        max-width: 90%;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .user-form .mu-text-field{
@@ -157,6 +163,8 @@ export default {
         .logo-con{
             text-align: center;
             padding-top: 60px;
+            color: #fff;
+            margin-bottom: 30px;
         }
         .logo{
             height: 100px;
@@ -179,5 +187,21 @@ export default {
             text-align: right;
             color: #e00;
         }
+    }
+</style>
+
+<style lang="scss">
+    body, html{
+        width: 100%;
+        height: 100%;
+        background-image: url("../../assets/bg.jpg");
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        background-attachment: fixed !important;
+        background-position: center center;
+        background-size: cover;
     }
 </style>

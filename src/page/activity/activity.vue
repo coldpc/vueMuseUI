@@ -254,7 +254,7 @@
     import Tab from "@/components/skirt/Tab"
     import TabTitle from "@/components/skirt/TabTitle"
     import TabContent from "@/components/skirt/TabContent"
-    import Tree from "@/components/skirt/Tree"
+//    import Tree from "@/components/skirt/Tree"
 
     import AddBenefit from "@/components/page/activity/addBenefit"
     import AddItem from "@/components/page/activity/addItem"

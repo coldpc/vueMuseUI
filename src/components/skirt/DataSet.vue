@@ -93,8 +93,15 @@
         },
         
         created(){
+            let dataSource = this.dataSource;
+            this.dataSource = null;
+            
             let ds = this.ds = new DataSet(this);
             this.initEvent(ds);
+            
+            if (dataSource) {
+                ds.setData(dataSource);
+            }
         },
         
         watch: {

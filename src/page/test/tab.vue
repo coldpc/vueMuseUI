@@ -7,9 +7,6 @@
                 <sk-tab-title>的话</sk-tab-title>
             </div>
             <div slot="body">
-                <sk-tab-content>
-                    <sk-tree :source="source"></sk-tree>
-                </sk-tab-content>
                 <sk-tab-content><div>231</div></sk-tab-content>
                 <sk-tab-content><div>331</div></sk-tab-content>
             </div>
@@ -24,12 +21,10 @@
     import Tab from "@/components/skirt/Tab"
     import TabTitle from "@/components/skirt/TabTitle"
     import TabContent from "@/components/skirt/TabContent"
-    import Tree from "@/components/skirt/Tree"
 
     Vue.component(Tab.name, Tab);
     Vue.component(TabTitle.name, TabTitle);
     Vue.component(TabContent.name, TabContent);
-    Vue.component(Tree.name, Tree);
 
     export default {
         data(){
@@ -60,13 +55,11 @@
     .slideUp-leave-active {
         transition: all 0.5s;
         opacity: 1;
-        /*height: 100%;*/
     }
 
     .slideUp-enter,
     .slideUp-leave-active {
         opacity: 0;
-        /*height: 0;*/
     }
 
     .title {

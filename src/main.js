@@ -22,8 +22,6 @@ import i18n from '@/plugin/lang'
 import base from '@/lib/base'
 
 router.beforeEach(function (to, from, next) {
-    next();
-    return;
     let ifLoginPage = to.name == 'page.account.login' || to.name == 'page.account.selectBrand' || to.name.indexOf("page.test") > -1;
     if (store.state.hasLogin){
         if (ifLoginPage){

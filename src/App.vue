@@ -38,24 +38,24 @@
                     <div class="bar-progress-con">
                         <mu-linear-progress mode="determinate" :value="100" color="#333"/>
                     </div>
-                    <div class="tab-part-con">
-                        <div ref="tabContainer" class="custom-analysis page-wrap-tabs">
-                            <div class="move-angle-btn move-left" @click="moveTab(1)">
-                                <mu-icon value="arrow_back" :size="20"/>
-                            </div>
-                            <div class="move-angle-btn move-right" @click="moveTab(-1)">
-                                <mu-icon value="arrow_forward" :size="20"/>
-                            </div>
-                            <ul ref="tabSetCon" class="tab-set transition">
-                                <li v-if="!option.closed" @click="clickTab(option, $event)" @dblclick="closeTab(option)" :class="option.active ? 'active' : ''" class="transition tab-item" v-for="(option, index) in routerOptions">
-                                    <span class="tab-title">{{$t(option.name)}}</span>
-                                    <span v-if="!option.isMain" class="tab-close" @click.stop="closeTab(option)">
-                                         <mu-icon value="close" :size="12"/>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <!--<div class="tab-part-con">-->
+                        <!--<div ref="tabContainer" class="custom-analysis page-wrap-tabs">-->
+                            <!--<div class="move-angle-btn move-left" @click="moveTab(1)">-->
+                                <!--<mu-icon value="arrow_back" :size="20"/>-->
+                            <!--</div>-->
+                            <!--<div class="move-angle-btn move-right" @click="moveTab(-1)">-->
+                                <!--<mu-icon value="arrow_forward" :size="20"/>-->
+                            <!--</div>-->
+                            <!--<ul ref="tabSetCon" class="tab-set transition">-->
+                                <!--<li v-if="!option.closed" @click="clickTab(option, $event)" @dblclick="closeTab(option)" :class="option.active ? 'active' : ''" class="transition tab-item" v-for="(option, index) in routerOptions">-->
+                                    <!--<span class="tab-title">{{$t(option.name)}}</span>-->
+                                    <!--<span v-if="!option.isMain" class="tab-close" @click.stop="closeTab(option)">-->
+                                         <!--<mu-icon value="close" :size="12"/>-->
+                                    <!--</span>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
             </template>
         </sk-location>
@@ -65,9 +65,11 @@
                 <div class="sk-home-main-content transition" :style="{left: props.left, top: props.top}" :class="!hasLogin ? 'full-screen' : ''">
                     <div class="sk-router-wrapper">
                         <div class="main-content" >
-                            <keep-alive>
-                                <router-view></router-view>
-                            </keep-alive>
+                            <!--<keep-alive>-->
+                                <!--<router-view></router-view>-->
+                            <!--</keep-alive>-->
+    
+                            <router-view></router-view>
                         </div>
                     </div>
                 </div>
