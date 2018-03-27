@@ -264,7 +264,7 @@
             "sk-tab": Tab,
             "sk-tab-title": TabTitle,
             "sk-tab-content": TabContent,
-            "sk-tree": Tree,
+//            "sk-tree": Tree,
             "sk-benefit-edit": AddBenefit,
             "sk-item-edit": AddItem
         },

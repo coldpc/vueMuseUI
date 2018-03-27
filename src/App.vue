@@ -169,9 +169,15 @@
             },
 
             exit(){
-                Account.logout.execute({
-                    success: this.onLogOut
+                this.$store.commit("confirm", {
+                      message: this.$t('confirmExit'),
+                      ok: () => {
+                            this.onLogOut();
+                      }
                 });
+//                Account.logout.execute({
+//                    success: this.onLogOut
+//                });
             },
 
             onLogOut(){
@@ -285,6 +291,10 @@
 
             setPosition(x) {
                 this.$refs.tabSetCon.style.marginLeft = x +'px';
+            },
+            
+            initAction() {
+                return this.data;
             }
         },
 
@@ -304,6 +314,7 @@
     html, body, #app {
         width: 100%;
         height: 100%;
+        background-color: #000;
     }
 
     .sk-home-top-part{
@@ -442,6 +453,7 @@
         height: 100%;
         overflow: auto;
         padding: 20px;
+        background-color: #fff;
     }
     .full-screen .sk-router-wrapper{
         padding: 0px;

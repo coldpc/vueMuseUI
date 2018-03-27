@@ -89,23 +89,23 @@ export default {
         this.$router.replace({
           name: "home"
         });
-        return;
-
-        account.login.execute({
-            mask: {},
-            data: {
-                loginName: this.d.loginName,
-                password: this.d.password
-            },
-            success: function (data) {
-                _this.$router.replace({
-                    name: "page.account.selectBrand"
-                });
-            },
-            failed: msg => {
-                _this.resultInfo = msg;
-            }
-        });
+//        return;
+//
+//        account.login.execute({
+//            mask: {},
+//            data: {
+//                loginName: this.d.loginName,
+//                password: this.d.password
+//            },
+//            success: function (data) {
+//                _this.$router.replace({
+//                    name: "page.account.selectBrand"
+//                });
+//            },
+//            failed: msg => {
+//                _this.resultInfo = msg;
+//            }
+//        });
       }
     }
 }

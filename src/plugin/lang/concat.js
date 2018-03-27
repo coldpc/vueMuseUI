@@ -385,5 +385,6 @@ export default {
     "isSelectedActiveInfo": {"zh_CN": "请完善参数值", "en_US": "Please fill Discount"},
     "applyDaily": {"zh_CN":"批量应用全部", "en_US":"Apply Daily"},
     "storeServiceConfig": {"zh_CN":"门店服务设置", "en_US":"Store Service Config"},
-    "needMoreStoreService": {"zh_CN":"若需要添加更多服务，请联系要客", "en_US":"If you want more service, please contact us"}
+    "needMoreStoreService": {"zh_CN":"若需要添加更多服务，请联系要客", "en_US":"If you want more service, please contact us"},
+    "confirmExit": {"zh_CN":"确定要退出登录吗？", "en_US":"Sure you want to log out?"},
 };
